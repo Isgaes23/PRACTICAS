@@ -1,0 +1,226 @@
+
+:root {
+    --primario:     #D86E2A;   
+    --secundario-1: #2F6EA5;   
+    --secundario-2: #5E8F3A;  
+    --neutral-1:    #2E2E2E;  
+    --neutral-2:    #F3F4F6;  
+}
+
+body {
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+    font-family: 'Inter', sans-serif;
+}
+/*Todos los titulos */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+header {
+    background-color: var(--primario);
+    color: white;
+}
+
+header h1 {
+    color: white;
+}
+
+header p {
+    color: #f9e6d5;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+header nav ul li a:hover {
+    color: var(--neutral-2);
+}
+
+
+#presentacion {
+    background-color: white;
+    color: var(--neutral-1);
+}
+
+#futbol {
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+}
+
+#baloncesto {
+    background-color:white;
+    color: var(--neutral-1);
+}
+
+#natacion {
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+}
+
+#atletismo {
+    background-color:white;
+    color: var(--neutral-1);
+}
+
+#mapa {
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+}
+
+#inscripcion {
+    background-color: white;
+    color: var(--neutral-1);
+}
+
+#contacto {
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+}
+
+section h2 {
+    color: var(--primario);
+    border-bottom: 3px solid var(--primario);
+}
+
+section article {
+    background-color: white;
+    border-left: 5px solid var(--secundario-1);
+}
+
+#futbol article {
+    border-left-color: var(--primario);
+}
+
+#baloncesto article {
+    border-left-color: var(--secundario-1);
+}
+
+#natacion article {
+    border-left-color: var(--secundario-2);
+}
+
+#atletismo article {
+    border-left-color: var(--primario);
+}
+
+#futbol article h3 {
+    color: var(--primario);
+}
+
+#baloncesto article h3 {
+    color: var(--secundario-1);
+}
+
+#natacion article h3 {
+    color: var(--secundario-2);
+}
+
+#atletismo article h3 {
+    color: var(--primario);
+}
+
+section article p strong {
+    color: var(--secundario-1);
+}
+
+#inscripcion ul li {
+    color: var(--neutral-1);
+}
+
+#inscripcion ul li::marker {
+    color: var(--secundario-2);
+}
+
+table caption {
+    color: var(--secundario-1);
+}
+
+table thead tr th {
+    background-color: var(--secundario-1);
+    color: white;
+}
+
+table tbody tr td {
+    color: var(--neutral-1);
+    background-color: white;
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: var(--neutral-2);
+}
+
+table tbody tr:hover td {
+    background-color: #dce9f5;
+    color: var(--secundario-1);
+}
+
+#contacto form legend {
+    color: var(--primario);
+}
+
+#contacto form label {
+    color: var(--neutral-1);
+}
+
+#contacto form input {
+    border: 2px solid var(--secundario-1);
+    color: var(--neutral-1);
+    background-color: white;
+}
+
+#contacto form select {
+    border: 2px solid var(--secundario-1);
+    color: var(--neutral-1);
+    background-color: white;
+}
+
+#contacto form textarea {
+    border: 2px solid var(--secundario-1);
+    color: var(--neutral-1);
+    background-color: white;
+}
+
+#contacto form input:focus {
+    border-color: var(--primario);
+    outline: none;
+}
+
+#contacto form select:focus {
+    border-color: var(--primario);
+    outline: none;
+}
+
+#contacto form textarea:focus {
+    border-color: var(--primario);
+    outline: none;
+}
+
+#contacto form button {
+    background-color: var(--primario);
+    color: white;
+    border: none;
+}
+
+#contacto form button:hover {
+    background-color: var(--secundario-1);
+    color: white;
+}
+footer {
+    background-color: var(--neutral-1);
+    color: var(--neutral-2);
+}
+
+footer p {
+    color: var(--neutral-2);
+}
+
+footer nav a {
+    color: var(--secundario-2);
+}
+
+footer nav a:hover {
+    color: var(--primario);
+}
