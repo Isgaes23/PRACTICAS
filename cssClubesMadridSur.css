@@ -1,0 +1,847 @@
+:root {
+    --primario: #F06200;
+    --secundario-1: #0D1B2A;
+    --secundario-2: #B5E8C5;
+    --neutral-1: #0D1B2A;
+    --neutral-2: #F3F4F6;
+    --neutral-3: #FFFFFF;
+    --radio: 6px;
+}
+/*Para que afecte a todos los elementos del html y les de border-box, margen y padding 0
+así no tenfo que tocarlo más adelante de forma individual*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--neutral-2);
+    color: var(--neutral-1);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+header {
+    background-color: var(--primario);
+    color: white;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+header h1 img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radio);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+section {
+    width: 100%;
+    padding: 2rem 1.25rem;
+}
+
+section h2 {
+    color: var(--primario);
+    border-bottom: 3px solid var(--primario);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.35rem;
+}
+
+#inicio {
+    background-color: var(--secundario-1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+}
+
+#inicio h2 {
+    color: var(--primario);
+    border-color: var(--primario);
+    font-size: 1.7rem;
+    justify-content: center;
+}
+
+#inicio p {
+    color: var(--neutral-2);
+    font-size: 1rem;
+    max-width: 620px;
+}
+
+#servicios {
+    background-color: var(--neutral-2);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 0;
+}
+
+#servicios>h2 {
+    padding: 0 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#futbol,
+#baloncesto,
+#natacion,
+#atletismo,
+#inscripciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+}
+
+#futbol h2,
+#baloncesto h2,
+#natacion h2,
+#atletismo h2,
+#inscripciones h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+}
+
+#futbol {
+    background-color: var(--neutral-2);
+}
+
+#baloncesto {
+    background-color: var(--neutral-3);
+}
+
+#natacion {
+    background-color: var(--neutral-2);
+}
+
+#atletismo {
+    background-color: var(--neutral-3);
+}
+
+#inscripciones {
+    background-color: var(--neutral-2);
+}
+
+section article {
+    background-color: var(--neutral-3);
+    border-left: 5px solid var(--secundario-1);
+    border-radius: var(--radio);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section article h3 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+section article p {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+section article p strong {
+    color: var(--secundario-1);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: fit-content;
+}
+
+#futbol article {
+    border-left-color: var(--primario);
+}
+
+#futbol article h3 {
+    color: var(--primario);
+}
+
+#baloncesto article {
+    border-left-color: var(--secundario-1);
+    background-color: var(--neutral-2);
+}
+
+#baloncesto article h3 {
+    color: var(--secundario-1);
+}
+
+#natacion article {
+    border-left-color: var(--secundario-2);
+}
+
+#natacion article h3 {
+    color: var(--secundario-2);
+}
+
+#atletismo article {
+    border-left-color: var(--primario);
+    background-color: var(--neutral-2);
+}
+
+#atletismo article h3 {
+    color: var(--primario);
+}
+
+#inscripciones ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#inscripciones ul li::marker {
+    color: var(--primario);
+}
+
+#inscripciones table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+}
+
+table caption {
+    font-weight: 700;
+    color: var(--primario);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+table thead tr th {
+    background-color: var(--secundario-1);
+    color: white;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+table tbody tr td {
+    padding: 0.6rem 1rem;
+    color: var(--neutral-1);
+    background-color: var(--neutral-3);
+    border-bottom: 1px solid var(--neutral-2);
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: var(--neutral-2);
+}
+
+table tbody tr:hover td {
+    background-color: var(--secundario-2);
+    color: var(--secundario-1);
+}
+
+#nosotros {
+    background-color: var(--neutral-3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#nosotros article {
+    border-left-color: var(--secundario-2);
+    background-color: var(--neutral-2);
+}
+
+#nosotros article h3 {
+    color: var(--secundario-1);
+}
+
+#nosotros article ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#nosotros article ul li::marker {
+    color: var(--secundario-2);
+}
+
+#blog {
+    background-color: var(--neutral-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#blog article {
+    border-left-color: var(--primario);
+}
+
+#blog article h3 {
+    color: var(--primario);
+}
+
+#blog article ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#blog article ul li::marker {
+    color: var(--primario);
+}
+
+#contacto {
+    background-color: var(--neutral-3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#contacto form legend {
+    color: var(--primario);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#contacto form label {
+    color: var(--neutral-1);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#contacto form input,
+#contacto form select,
+#contacto form textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--secundario-1);
+    border-radius: var(--radio);
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--neutral-1);
+    background-color: var(--neutral-2);
+}
+
+#contacto form input:focus,
+#contacto form select:focus,
+#contacto form textarea:focus {
+    border-color: var(--primario);
+    outline: none;
+}
+
+#contacto form button {
+    margin-top: 0.75rem;
+    padding: 0.7rem 1.75rem;
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio);
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+}
+
+#contacto form button:hover {
+    background-color: var(--secundario-1);
+}
+
+#mapa-contenedor {
+    background-color: var(--neutral-2);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    border: 2px dashed var(--secundario-1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#mapa-contenedor h3 {
+    color: var(--secundario-1);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+
+#contacto address {
+    background-color: var(--neutral-2);
+    border-left: 5px solid var(--secundario-2);
+    border-radius: var(--radio);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-style: normal;
+}
+
+#contacto address h3 {
+    color: var(--secundario-1);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+
+#contacto address p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+#contacto address a {
+    color: var(--primario);
+}
+
+#contacto address a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--secundario-1);
+    color: var(--neutral-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    color: var(--neutral-2);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+}
+
+footer nav a {
+    color: var(--secundario-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+footer nav a:hover {
+    color: var(--primario);
+}
+
+/* Solo móviles */
+@media (max-width: 480px) {
+
+    header {
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header h1 img {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.78rem;
+        padding: 0.25rem 0.45rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.1rem;
+    }
+
+    #inicio {
+        padding: 2rem 1rem;
+    }
+
+    #inicio h2 {
+        font-size: 1.3rem;
+    }
+
+    #inicio p {
+        font-size: 0.9rem;
+    }
+
+    #servicios > h2 {
+        padding: 0 1rem;
+    }
+
+    #futbol,
+    #baloncesto,
+    #natacion,
+    #atletismo,
+    #inscripciones {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    section article {
+        padding: 1rem 1.1rem;
+    }
+
+    section article h3 {
+        font-size: 0.95rem;
+    }
+
+    section article p {
+        font-size: 0.85rem;
+    }
+
+    table thead tr th,
+    table tbody tr td {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.8rem;
+    }
+
+    #contacto form button {
+        width: 100%;
+        align-self: stretch;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        gap: 0.75rem;
+    }
+
+    footer nav {
+        gap: 0.4rem 1rem;
+    }
+
+    footer nav a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablets y móbiles primero */
+@media (min-width: 640px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 2rem;
+    }
+
+    header p {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    header nav ul {
+        justify-content: flex-end;
+        gap: 0.15rem 0.5rem;
+    }
+
+    section {
+        padding: 2.5rem 2rem;
+    }
+
+    #inicio {
+        padding: 4rem 2rem;
+    }
+
+    #servicios {
+        padding: 2.5rem 0 0;
+    }
+
+    #servicios>h2 {
+        padding: 0 2rem;
+    }
+
+    #futbol,
+    #baloncesto,
+    #natacion,
+    #atletismo,
+    #inscripciones {
+        padding: 2rem;
+    }
+
+    #futbol,
+    #baloncesto,
+    #natacion,
+    #atletismo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    #futbol h2,
+    #baloncesto h2,
+    #natacion h2,
+    #atletismo h2 {
+        flex: 0 0 100%;
+    }
+
+    #futbol article,
+    #baloncesto article,
+    #natacion article,
+    #atletismo article {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 260px;
+    }
+
+    #nosotros {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    #nosotros h2 {
+        flex: 0 0 100%;
+    }
+
+    #nosotros article {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 240px;
+    }
+
+    #blog {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    #blog h2 {
+        flex: 0 0 100%;
+    }
+
+    #blog article {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 260px;
+    }
+
+    #contacto {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    #contacto h2 {
+        flex: 0 0 100%;
+    }
+
+    #contacto form {
+        flex: 0 0 100%;
+    }
+
+    #mapa-contenedor {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+
+    #contacto address {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+}
+
+/*Pa ordenadores despues */
+@media (min-width: 1024px) {
+
+    header {
+        padding: 0.75rem 4rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 3rem 4rem;
+    }
+
+    #inicio {
+        padding: 5rem 4rem;
+    }
+
+    #inicio h2 {
+        font-size: 2rem;
+    }
+
+    #servicios {
+        padding: 3rem 0 0;
+    }
+
+    #servicios>h2 {
+        padding: 0 4rem;
+    }
+
+    #futbol,
+    #baloncesto,
+    #natacion,
+    #atletismo,
+    #inscripciones {
+        padding: 2.5rem 4rem;
+    }
+
+    #nosotros article {
+        flex: 1 1 calc(33% - 1rem);
+        min-width: 220px;
+    }
+
+    #contacto form {
+        flex: 2 1 400px;
+    }
+
+    #mapa-contenedor {
+        flex: 1 1 240px;
+    }
+
+    #contacto address {
+        flex: 1 1 240px;
+    }
+}
+
+/* Ordenadores y pantallas más grandotas*/
+@media (min-width: 1400px) {
+
+    section {
+        padding: 3.5rem 8rem;
+    }
+
+    #servicios>h2 {
+        padding: 0 8rem;
+    }
+
+    #futbol,
+    #baloncesto,
+    #natacion,
+    #atletismo,
+    #inscripciones {
+        padding: 2.5rem 8rem;
+    }
+}
