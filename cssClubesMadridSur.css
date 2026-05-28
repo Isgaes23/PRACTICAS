@@ -7,6 +7,7 @@
     --neutral-3: #FFFFFF;
     --radio: 6px;
 }
+
 /*Para que afecte a todos los elementos del html y les de border-box, margen y padding 0
 así no tenfo que tocarlo más adelante de forma individual*/
 *,
@@ -123,14 +124,52 @@ section h2 {
 }
 
 #inicio {
+    position: relative;
+    background-image: url('hero-cover-image-for-a-sports-club-search-website-.jpeg');
     background-color: var(--secundario-1);
-    color: white;
+    background-size: cover;
+    background-position: center 25%;
+    color: var(--secundario-2);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
+    min-height: 420px;
+    isolation: isolate;
+}
+
+#inicio::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(to bottom,
+            rgba(13, 27, 42, 0.25) 0%,
+            rgba(13, 27, 42, 0.15) 50%,
+            rgba(13, 27, 42, 0.50) 100%);
+    z-index: -1;
+}
+
+#inicio a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primario);
+    color: var(--neutral-3);
+    padding: 0.8rem 2rem;
+    border-radius: var(--radio);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+#inicio a:hover {
+    background-color: var(--neutral-3);
+    color: var(--primario);
+    transform: translateY(-2px);
 }
 
 #inicio h2 {
@@ -144,6 +183,274 @@ section h2 {
     color: var(--neutral-2);
     font-size: 1rem;
     max-width: 620px;
+}
+
+#acceso-rapido {
+    background-color: var(--neutral-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+}
+
+#acceso-rapido h2 {
+    color: var(--secundario-1);
+    text-align: center;
+}
+
+#acceso-rapido article {
+    background-color: var(--neutral-3);
+    border-left: 5px solid var(--primario);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#acceso-rapido article h3 {
+    color: var(--primario);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#acceso-rapido article p {
+    color: var(--neutral-1);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#acceso-rapido article a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--neutral-3);
+    background-color: var(--primario);
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radio);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+#acceso-rapido article a:hover {
+    background-color: var(--secundario-1);
+}
+
+/* ========================
+   #estadisticas
+   ======================== */
+#estadisticas {
+    background-color: var(--secundario-1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+}
+
+#estadisticas article {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.75rem 1rem;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+}
+
+#estadisticas article strong {
+    color: var(--primario);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#estadisticas article span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+}
+
+/* ========================
+   #deportes-destacados
+   ======================== */
+#deportes-destacados {
+    background-color: var(--neutral-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#deportes-destacados article {
+    background-color: var(--neutral-3);
+    border-left: 5px solid var(--primario);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#deportes-destacados article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+#deportes-destacados article > svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primario);
+    margin-bottom: 0.25rem;
+}
+
+#deportes-destacados article h3 {
+    color: var(--primario);
+    font-size: 1.1rem;
+}
+
+#deportes-destacados article p {
+    color: var(--neutral-1);
+    font-size: 0.875rem;
+    display: block;
+}
+
+#deportes-destacados article a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--primario);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+#deportes-destacados article a:hover {
+    text-decoration: underline;
+}
+
+#deporte-baloncesto,
+#deporte-tenis {
+    border-left-color: var(--secundario-1);
+}
+
+#deporte-baloncesto > svg,
+#deporte-baloncesto h3,
+#deporte-baloncesto a,
+#deporte-tenis > svg,
+#deporte-tenis h3,
+#deporte-tenis a {
+    color: var(--secundario-1);
+}
+
+#deporte-natacion {
+    border-left-color: var(--secundario-2);
+    background-color: rgba(181, 232, 197, 0.18);
+}
+
+#deporte-natacion > svg,
+#deporte-natacion h3,
+#deporte-natacion a {
+    color: var(--secundario-1);
+}
+
+/* ========================
+   #municipios
+   ======================== */
+#municipios {
+    background-color: var(--secundario-1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#municipios h2 {
+    color: var(--neutral-3);
+    border-color: var(--primario);
+}
+
+#municipios article {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-left: 5px solid var(--primario);
+    border-radius: var(--radio);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: background-color 0.2s;
+}
+
+#municipios article:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+#municipios article h3 {
+    color: var(--primario);
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+}
+
+#municipios article > p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    display: block;
+}
+
+#municipios article ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#municipios article ul li {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+#municipios article ul li svg {
+    color: var(--primario);
+}
+
+#muni-getafe {
+    border-left-color: var(--secundario-2);
+}
+
+#muni-getafe h3,
+#muni-getafe ul li svg {
+    color: var(--secundario-2);
+}
+
+#muni-parla {
+    border-left-color: var(--neutral-3);
+}
+
+#muni-parla h3,
+#muni-parla ul li svg {
+    color: var(--neutral-3);
 }
 
 #servicios {
@@ -382,6 +689,58 @@ table tbody tr:hover td {
     gap: 1.5rem;
 }
 
+/* ========================
+   #aviso-legal / #privacidad / #cookies
+   ======================== */
+#aviso-legal,
+#privacidad,
+#cookies {
+    background-color: var(--neutral-3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#aviso-legal article,
+#privacidad article,
+#cookies article {
+    border-left-color: var(--secundario-1);
+}
+
+#aviso-legal article h3,
+#privacidad article h3,
+#cookies article h3 {
+    color: var(--secundario-1);
+}
+
+#aviso-legal article ul,
+#privacidad article ul,
+#cookies article ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#aviso-legal article ul li::marker,
+#privacidad article ul li::marker,
+#cookies article ul li::marker {
+    color: var(--primario);
+}
+
+#aviso-legal>p,
+#privacidad>p,
+#cookies>p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--neutral-1);
+    opacity: 0.7;
+}
+
 #contacto form {
     display: flex;
     flex-direction: column;
@@ -590,7 +949,7 @@ footer nav a:hover {
         font-size: 0.9rem;
     }
 
-    #servicios > h2 {
+    #servicios>h2 {
         padding: 0 1rem;
     }
 
@@ -619,6 +978,15 @@ footer nav a:hover {
     table tbody tr td {
         padding: 0.5rem 0.65rem;
         font-size: 0.8rem;
+    }
+
+    #estadisticas article strong {
+        font-size: 1.8rem;
+    }
+
+    #deportes-destacados article > svg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     #contacto form button {
@@ -710,6 +1078,55 @@ footer nav a:hover {
     #atletismo article {
         flex: 1 1 calc(50% - 0.75rem);
         min-width: 260px;
+    }
+
+    #estadisticas article {
+        flex: 1 1 25%;
+    }
+
+    #deportes-destacados {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #deportes-destacados h2 {
+        flex: 0 0 100%;
+    }
+
+    #deportes-destacados article {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 220px;
+    }
+
+    #acceso-rapido {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #acceso-rapido h2 {
+        flex: 0 0 100%;
+    }
+
+    #acceso-rapido article {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 220px;
+    }
+
+    #municipios {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #municipios h2 {
+        flex: 0 0 100%;
+    }
+
+    #municipios article {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 200px;
     }
 
     #nosotros {
@@ -808,6 +1225,19 @@ footer nav a:hover {
         padding: 2.5rem 4rem;
     }
 
+    #deportes-destacados article {
+        flex: 1 1 calc(33% - 0.67rem);
+    }
+
+    #acceso-rapido article {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+
+    #municipios article {
+        flex: 1 1 calc(25% - 0.75rem);
+        min-width: 180px;
+    }
+
     #nosotros article {
         flex: 1 1 calc(33% - 1rem);
         min-width: 220px;
@@ -831,6 +1261,14 @@ footer nav a:hover {
 
     section {
         padding: 3.5rem 8rem;
+    }
+
+    #estadisticas {
+        padding: 0;
+    }
+
+    #deportes-destacados article {
+        flex: 1 1 calc(20% - 1rem);
     }
 
     #servicios>h2 {

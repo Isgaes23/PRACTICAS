@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap">
+    <link rel="stylesheet" href="cssClubesMadridSur.css">
+    <title>Contacto — Tu Cancha Sur</title>
+</head>
+<body>
+
+    <header>
+        <h1>
+            <img src="LOGOTIPO2 - copia.jpeg" alt="Tu Cancha Sur">
+            TU CANCHA SUR
+        </h1>
+        <p>Directorio de clubs y actividades deportivas en la zona sur de Madrid</p>
+        <nav>
+            <ul>
+                <li><a href="Servicios.html"><i data-lucide="shield"></i> Servicios</a></li>
+                <li><a href="SobreNosotros.html"><i data-lucide="users"></i> Sobre Nosotros</a></li>
+                <li><a href="Blog.html"><i data-lucide="book-open"></i> Blog / Recursos</a></li>
+                <li><a href="Contacto.html"><i data-lucide="mail"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contacto">
+        <h2><i data-lucide="mail"></i> Contacto</h2>
+
+        <form action="#" method="post">
+            <legend><i data-lucide="send"></i> Envíanos un mensaje</legend>
+
+            <label for="nombre"><i data-lucide="user"></i> Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="email"><i data-lucide="at-sign"></i> Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+            <label for="telefono"><i data-lucide="phone"></i> Teléfono (opcional):</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="600 000 000">
+
+            <label for="municipio"><i data-lucide="map-pin"></i> Municipio:</label>
+            <select id="municipio" name="municipio">
+                <option value="">-- Selecciona tu municipio --</option>
+                <option value="leganes">Leganés</option>
+                <option value="getafe">Getafe</option>
+                <option value="parla">Parla</option>
+                <option value="fuenlabrada">Fuenlabrada</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="club"><i data-lucide="building"></i> Club de interés:</label>
+            <select id="club" name="club">
+                <option value="">-- Selecciona un club --</option>
+                <option value="futbol-leganes">CD Leganés Amateur</option>
+                <option value="futbol-getafe">AD Getafe Fútbol Base</option>
+                <option value="futbol-parla">CD Parla FC</option>
+                <option value="futbol-fuenlabrada">UD Fuenlabrada Sur</option>
+                <option value="baloncesto-parla">CB Parla</option>
+                <option value="baloncesto-fuenlabrada">CB Fuenlabrada Sur</option>
+                <option value="baloncesto-getafe">CB Getafe Sur</option>
+                <option value="natacion-leganes">CN Leganés</option>
+                <option value="natacion-getafe">CN Getafe</option>
+                <option value="atletismo-parla">CA Parla</option>
+                <option value="atletismo-leganes">CA Leganés Sur</option>
+                <option value="tenis-fuenlabrada">CT Fuenlabrada</option>
+                <option value="padel-getafe">Pádel Sur Getafe</option>
+                <option value="otro">Otro / No sé aún</option>
+            </select>
+
+            <label for="asunto"><i data-lucide="tag"></i> Asunto:</label>
+            <select id="asunto" name="asunto">
+                <option value="">-- Tipo de consulta --</option>
+                <option value="inscripcion">Información sobre inscripción</option>
+                <option value="horarios">Consulta de horarios</option>
+                <option value="cuotas">Información sobre cuotas</option>
+                <option value="añadir-club">Quiero añadir mi club al directorio</option>
+                <option value="error">Reportar información incorrecta</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="mensaje"><i data-lucide="message-square"></i> Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta aquí..."></textarea>
+
+            <button type="submit"><i data-lucide="send"></i> Enviar Formulario</button>
+        </form>
+
+        <div id="mapa-contenedor">
+            <h3><i data-lucide="map"></i> Zona de cobertura</h3>
+            <p>Cubrimos los municipios del sur metropolitano de Madrid:</p>
+            <ul>
+                <li><i data-lucide="map-pin"></i> <strong>Leganés</strong> — al suroeste de Madrid capital</li>
+                <li><i data-lucide="map-pin"></i> <strong>Getafe</strong> — al sur de Madrid capital</li>
+                <li><i data-lucide="map-pin"></i> <strong>Parla</strong> — 25 km al sur de Madrid</li>
+                <li><i data-lucide="map-pin"></i> <strong>Fuenlabrada</strong> — 18 km al suroeste de Madrid</li>
+            </ul>
+            <p><i data-lucide="map-pin"></i> [Aquí se insertará el mapa interactivo]</p>
+        </div>
+
+        <address>
+            <h3><i data-lucide="phone"></i> Datos de contacto</h3>
+            <p><i data-lucide="mail"></i> <a href="mailto:info@tucanchasur.es">info@tucanchasur.es</a></p>
+            <p><i data-lucide="phone"></i> 91 000 00 00 — Lunes a viernes, 9:00–18:00 h</p>
+            <p><i data-lucide="clock"></i> Tiempo de respuesta habitual: 1–2 días laborables</p>
+        </address>
+
+        <article>
+            <h3><i data-lucide="circle-help"></i> Preguntas frecuentes</h3>
+            <ul>
+                <li>
+                    <strong>¿El directorio es gratuito para los usuarios?</strong><br>
+                    Sí, completamente. No hay registro, ni suscripción, ni publicidad de pago.
+                </li>
+                <li>
+                    <strong>¿Puedo añadir mi club al directorio?</strong><br>
+                    Sí. Escríbenos con los datos del club y lo revisamos en un plazo de 5 días laborables.
+                    La inclusión es gratuita.
+                </li>
+                <li>
+                    <strong>La información de un club está desactualizada, ¿qué hago?</strong><br>
+                    Usa el formulario de contacto con el asunto "Reportar información incorrecta" y lo
+                    corregimos en 24–48 horas.
+                </li>
+                <li>
+                    <strong>¿El directorio incluye clubes de otros municipios?</strong><br>
+                    Por ahora solo cubrimos Leganés, Getafe, Parla y Fuenlabrada. Estamos trabajando
+                    para ampliar la cobertura a Móstoles, Alcorcón y Pinto en la próxima temporada.
+                </li>
+                <li>
+                    <strong>¿Los horarios publicados son los de la temporada actual?</strong><br>
+                    Sí. Actualizamos todos los datos al inicio de cada temporada (septiembre) con
+                    información confirmada directamente por los clubs.
+                </li>
+            </ul>
+        </article>
+
+    </section>
+
+    <footer>
+        <p><i data-lucide="copyright"></i> Directorio de Clubes Deportivos Madrid Sur 2026</p>
+        <nav>
+            <a href="ClubesMadridSur.html"><i data-lucide="home"></i> Inicio</a>
+            <a href="Servicios.html"><i data-lucide="shield"></i> Servicios</a>
+            <a href="SobreNosotros.html"><i data-lucide="users"></i> Sobre Nosotros</a>
+            <a href="Blog.html"><i data-lucide="book-open"></i> Blog</a>
+            <a href="Contacto.html"><i data-lucide="mail"></i> Contacto</a>
+        </nav>
+        <nav>
+            <a href="AvisoLegal.html">Aviso Legal</a>
+            <a href="PoliticaPrivacidad.html">Política de Privacidad</a>
+            <a href="PoliticaCookies.html">Política de Cookies</a>
+        </nav>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
