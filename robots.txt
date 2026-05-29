@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /favicon/
 
 Sitemap: https://www.tucanchasur.es/sitemap.xml
