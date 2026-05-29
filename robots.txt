@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tucanchasur.es/sitemap.xml
+Sitemap: https://isgaes23.github.io/PRACTICAS/sitemap.xml
